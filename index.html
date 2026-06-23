@@ -172,6 +172,8 @@
   section{ position:relative; }
   .section-pad{ padding:110px 0; }
   @media (max-width:640px){ .section-pad{ padding:72px 0; } }
+  .feature{ padding-bottom:50px; }
+  .process{ padding-top:50px; }
   .section-head{ max-width:720px; margin-bottom:56px; }
   .section-head h2{
     font-family:var(--display); font-weight:800; font-size:clamp(2rem, 4.4vw, 3.6rem);
@@ -281,6 +283,9 @@
     margin-bottom:18px; transition:border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
     font-family:inherit;
   }
+  @media (max-width:640px){
+    .path-card{ padding:22px 20px; }
+  }
   .path-card:hover{ border-color:var(--cyan-deep); transform:translateY(-3px); }
   .path-card[aria-expanded="true"]{ border-color:var(--cyan-deep); box-shadow:0 8px 28px rgba(14,157,176,0.12); }
   .path-card-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
@@ -342,13 +347,13 @@
   /* ============ FOOTER ============ */
   footer{ background:var(--white); border-top:1px solid var(--grey-line); padding:56px 0 24px; }
   .footer-top{
-    display:flex; justify-content:flex-start; align-items:flex-start; flex-wrap:wrap;
+    display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px;
     padding-bottom:32px; border-bottom:1px solid var(--grey-line);
   }
   .footer-top > div:first-child{ flex:0 1 420px; }
   .footer-logo{ font-family:var(--display); font-weight:800; font-size:1.2rem; text-transform:uppercase; }
   .footer-tag{ color:var(--grey-mid); font-size:0.88rem; margin-top:10px; max-width:380px; line-height:1.55; }
-  .footer-bottom{ display:flex; justify-content:space-between; align-items:flex-end; padding-top:28px; flex-wrap:wrap; gap:24px; }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:24px; flex-wrap:wrap; gap:24px; }
   .footer-bottom p{ font-size:0.78rem; color:var(--grey-mid); }
   .footer-contact{ text-align:right; }
   .footer-contact h4{
@@ -357,11 +362,10 @@
   }
   .footer-contact a{ display:block; font-size:0.88rem; color:var(--grey-dark); margin-bottom:6px; }
   .footer-contact a:hover{ color:var(--cyan-deep); text-decoration:underline; }
-  .footer-contact .social-row{ justify-content:flex-end; margin-top:14px; }
   @media (max-width:560px){
-    .footer-bottom{ flex-direction:column; align-items:flex-start; }
+    .footer-top{ flex-direction:column; }
     .footer-contact{ text-align:left; }
-    .footer-contact .social-row{ justify-content:flex-start; }
+    .footer-bottom{ flex-direction:column; align-items:flex-start; }
   }
   .social-row{ display:flex; gap:14px; }
   .social-row a{
@@ -471,6 +475,7 @@
     <div class="section-head">
       <span class="eyebrow">The Work</span>
       <h2>50+ pairs. Zero repeats.</h2>
+      <p>One-of-one, every time. More on <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener" style="text-decoration:underline;">@cope_custom_kicks</a>.</p>
     </div>
     <div class="filter-row">
       <button class="filter-btn active" data-filter="all">All Work</button>
@@ -653,21 +658,21 @@
         <div class="footer-logo">COPE CUSTOM KICKS</div>
         <p class="footer-tag">Hand-painted custom sneakers, founded in Trumbull, Connecticut. One pair at a time since 2019.</p>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Cope Custom Kicks. All pairs hand-painted, all stories original.</p>
       <div class="footer-contact">
         <h4>Contact</h4>
         <a href="mailto:cope.custom.kicks@gmail.com">cope.custom.kicks@gmail.com</a>
         <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener">@cope_custom_kicks</a>
-        <div class="social-row">
-          <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/aidan-copeland/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.92 6 2.5 6S0 4.88 0 3.5 1.06 1 2.48 1s2.5 1.12 2.5 2.5zM0 8.5h5V24H0V8.5zM8.5 8.5h4.79v2.05h.07c.67-1.26 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-7.42c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-5V8.5z"/></svg>
-          </a>
-        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cope Custom Kicks. All pairs hand-painted, all stories original.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aidan-copeland/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.92 6 2.5 6S0 4.88 0 3.5 1.06 1 2.48 1s2.5 1.12 2.5 2.5zM0 8.5h5V24H0V8.5zM8.5 8.5h4.79v2.05h.07c.67-1.26 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-7.42c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-5V8.5z"/></svg>
+        </a>
       </div>
     </div>
   </div>
