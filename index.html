@@ -108,7 +108,7 @@
   .hero-visual::after{
     content:'';
     position:absolute; inset:0;
-    background:linear-gradient(to top, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.35) 38%, rgba(17,17,17,0.05) 60%, transparent 75%);
+    background:linear-gradient(to top, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.62) 45%, rgba(17,17,17,0.38) 70%, rgba(17,17,17,0.22) 100%);
   }
 
   .hero-content{
@@ -210,16 +210,14 @@
   .filter-btn:hover{ border-color:var(--black); color:var(--black); }
   .filter-btn.active{ background:var(--cyan-deep); color:var(--white); border-color:var(--cyan-deep); }
 
-  .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:4px; }
+  .grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
   @media (max-width:900px){ .grid{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:560px){ .grid{ grid-template-columns:1fr; } }
 
   .card{
-    position:relative; aspect-ratio:4/5; overflow:hidden;
+    position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:8px;
     background:var(--grey-bg); cursor:pointer;
   }
-  .card.big{ grid-row:span 2; aspect-ratio:auto; }
-  @media (max-width:900px){ .card.big{ grid-row:span 1; aspect-ratio:4/5; } }
   .card img{ width:100%; height:100%; object-fit:cover; transition:transform 0.7s cubic-bezier(.2,.8,.2,1); }
   .card:hover img{ transform:scale(1.04); }
   .card-overlay{
@@ -337,20 +335,20 @@
   .final-cta .btn-solid:hover{ background:#ddd; }
 
   /* ============ FOOTER ============ */
-  footer{ background:var(--white); border-top:1px solid var(--grey-line); padding:64px 0 28px; }
+  footer{ background:var(--white); border-top:1px solid var(--grey-line); padding:56px 0 24px; }
   .footer-top{
-    display:flex; justify-content:space-between; align-items:flex-start; gap:64px; flex-wrap:wrap;
-    padding-bottom:40px; border-bottom:1px solid var(--grey-line);
+    display:flex; justify-content:flex-start; align-items:flex-start; gap:clamp(48px, 10vw, 140px); flex-wrap:wrap;
+    padding-bottom:32px; border-bottom:1px solid var(--grey-line);
   }
-  .footer-top > div:first-child{ flex:1 1 280px; max-width:340px; }
+  .footer-top > div:first-child{ flex:0 1 320px; }
   .footer-logo{ font-family:var(--display); font-weight:800; font-size:1.2rem; text-transform:uppercase; }
   .footer-tag{ color:var(--grey-mid); font-size:0.88rem; margin-top:10px; max-width:300px; line-height:1.55; }
-  .footer-links{ display:flex; gap:72px; flex-wrap:wrap; flex:0 1 auto; }
-  .footer-col{ min-width:140px; }
-  .footer-col h4{ font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:16px; }
-  .footer-col a{ display:block; font-size:0.9rem; color:var(--black); margin-bottom:12px; }
+  .footer-links{ display:flex; gap:56px; flex-wrap:wrap; }
+  .footer-col{ min-width:130px; }
+  .footer-col h4{ font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:14px; }
+  .footer-col a{ display:block; font-size:0.9rem; color:var(--black); margin-bottom:10px; }
   .footer-col a:hover{ text-decoration:underline; }
-  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:28px; flex-wrap:wrap; gap:16px; }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:22px; flex-wrap:wrap; gap:16px; }
   .footer-bottom p{ font-size:0.78rem; color:var(--grey-mid); }
   .social-row{ display:flex; gap:14px; }
   .social-row a{
@@ -384,12 +382,12 @@
 
 <section class="hero" id="home">
   <div class="hero-visual">
-    <img src="cleats.jpg" alt="Hand-painted Florida Gators cleats by Cope Custom Kicks" loading="eager">
+    <img src="rhyne.jpg" alt="Hand-painted Florida Gators themed Air Jordan low sneakers by Cope Custom Kicks" loading="eager">
   </div>
   <div class="hero-content">
     <h1>Hand<br>Painted.<br><span class="accent">Hand Made.</span></h1>
     <div class="hero-meta">
-      <p class="hero-sub">One-of-one custom sneakers, built from your story instead of a template. Every pair starts blank and ends with your name on it.</p>
+      <p class="hero-sub">Custom sneakers, built from your story.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-solid">Start Your Pair</a>
         <a href="#work" class="btn btn-outline">View the Work</a>
@@ -455,7 +453,7 @@
     <div class="section-head">
       <span class="eyebrow">The Work</span>
       <h2>50+ pairs. Zero repeats.</h2>
-      <p>Every commission is built around a theme, a story, or a player. More work lives on <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener" style="text-decoration:underline;">@cope_custom_kicks</a>.</p>
+      <p>One-of-one, every time. More on <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener" style="text-decoration:underline;">@cope_custom_kicks</a>.</p>
     </div>
     <div class="filter-row">
       <button class="filter-btn active" data-filter="all">All Work</button>
@@ -465,7 +463,7 @@
       <button class="filter-btn" data-filter="team">Team / Logos</button>
     </div>
     <div class="grid" id="galleryGrid">
-      <div class="card big" data-cat="cleats">
+      <div class="card" data-cat="cleats">
         <img src="cleats.jpg" alt="Hand-painted Florida Gators baseball cleats, orange and blue with Air Jordan 3 elephant print sole" loading="lazy">
         <div class="card-overlay"><span class="card-tag">Cleats</span><span class="card-title">Florida Gators</span></div>
       </div>
@@ -509,24 +507,24 @@
     <div class="section-head">
       <span class="eyebrow">Project Spotlight</span>
       <h2>Fleetwood Mac, Head to Toe.</h2>
-      <p>Some commissions are a single graphic. This one was a full concept — band portrait, wordmark, brick-and-lightning texture, and a tribute scene, spread across one pair.</p>
+      <p>One full concept, four angles — portrait, wordmark, scene, and the finished pair.</p>
     </div>
     <div class="feature-grid">
       <div class="feature-card">
-        <img src="fleetwood2.jpg" alt="Fleetwood Mac band silhouette portrait painted on Vans sneaker toe" loading="lazy">
+        <img src="fleetwood1.jpg" alt="Fleetwood Mac band silhouette portrait painted on Vans sneaker toe" loading="lazy">
         <span class="feature-label">The Portrait</span>
       </div>
       <div class="feature-card">
-        <img src="fleetwood3.jpg" alt="Fleetwood Mac wordmark logo airbrushed on Vans sneaker toe" loading="lazy">
+        <img src="fleetwood2.jpg" alt="Fleetwood Mac wordmark logo airbrushed on Vans sneaker toe" loading="lazy">
         <span class="feature-label">The Wordmark</span>
       </div>
       <div class="feature-card">
-        <img src="fleetwood1.jpg" alt="Fleetwood Mac band portrait detail on aged brick-textured Vans sneaker" loading="lazy">
-        <span class="feature-label">The Detail</span>
+        <img src="fleetwood4.jpg" alt="Fleetwood Mac themed Vans sneakers with tribute silhouette scene" loading="lazy">
+        <span class="feature-label">The Tribute Scene</span>
       </div>
       <div class="feature-card">
-        <img src="fleetwood4.jpg" alt="Fleetwood Mac themed Vans sneakers with tribute silhouette scene" loading="lazy">
-        <span class="feature-label">The Full Story</span>
+        <img src="fleetwood3.jpg" alt="Fleetwood Mac band portrait and wordmark together on finished Vans sneaker pair" loading="lazy">
+        <span class="feature-label">The Full Pair</span>
       </div>
     </div>
   </div>
@@ -537,23 +535,23 @@
     <div class="section-head">
       <span class="eyebrow">The Process</span>
       <h2>From sketch to clear coat.</h2>
-      <p>No two commissions follow the exact same path, but every pair goes through the same care.</p>
+      <p>Three steps, every time.</p>
     </div>
     <div class="process-grid">
       <div class="process-cell">
         <span class="process-num">01</span>
         <h3>You Bring the Story</h3>
-        <p>A theme, a player, a memory, a logo placement. Give as much or as little direction as you have.</p>
+        <p>A theme, a player, a memory — as much or as little direction as you have.</p>
       </div>
       <div class="process-cell">
         <span class="process-num">02</span>
         <h3>We Lock Design & Price</h3>
-        <p>Detailed brief or open theme — either way, a clear price before any paint touches the shoe.</p>
+        <p>A clear price before any paint touches the shoe.</p>
       </div>
       <div class="process-cell">
         <span class="process-num">03</span>
         <h3>Hand-Painted, Then Sealed</h3>
-        <p>Stencils, airbrush, and brushwork on Angelus paint, then clear-coated against UV, water, and scratches.</p>
+        <p>Angelus paint, airbrush, and clear coat against UV, water, and scratches.</p>
       </div>
     </div>
   </div>
@@ -564,7 +562,7 @@
     <div class="section-head">
       <span class="eyebrow">Build a Pair</span>
       <h2>Two ways to start.</h2>
-      <p>Whichever you choose, the base sneaker — yours or sourced — folds into one clear total before work begins.</p>
+      <p>One clear total, before work begins.</p>
     </div>
     <div class="price-grid">
       <div>
@@ -576,7 +574,7 @@
             </div>
             <svg class="path-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
-          <p>Come with a detailed theme — specific designs, logos, placement. You'll get a price built around exactly what you describe.</p>
+          <p>Come with a detailed theme. You'll get a price built around exactly what you describe.</p>
           <div class="path-detail">
             <div class="path-step"><span>01</span>Send reference images, logos, or a written brief of exactly what you want on the shoe.</div>
             <div class="path-step"><span>02</span>Get a fixed price back within a day or two — no back-and-forth needed since the design is already locked.</div>
@@ -591,7 +589,7 @@
             </div>
             <svg class="path-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
-          <p>Bring a basic theme and a price range. A full design gets built to match both — no detailed brief required.</p>
+          <p>Bring a basic theme and a budget. A design gets built to match both.</p>
           <div class="path-detail">
             <div class="path-step"><span>01</span>Share a loose idea — a team, a person, a vibe — and a budget you're comfortable with.</div>
             <div class="path-step"><span>02</span>A concept sketch comes back built to fit both the theme and the price.</div>
@@ -625,7 +623,7 @@
   <div class="wrap">
     <span class="eyebrow">Start a Commission</span>
     <h2>Your Shoes.<br><span class="accent">Your Story.</span></h2>
-    <p>Tell me the theme, the player, the memory — I'll tell you what it costs and how long it'll take.</p>
+    <p>Tell me the theme — I'll tell you the price.</p>
     <div class="hero-ctas">
       <a href="mailto:cope.custom.kicks@gmail.com" class="btn btn-solid">Email Cope Custom Kicks</a>
       <a href="https://www.instagram.com/cope_custom_kicks/" target="_blank" rel="noopener" class="btn btn-outline">DM on Instagram</a>
